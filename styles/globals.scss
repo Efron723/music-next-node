@@ -55,7 +55,8 @@ $theme-colors: (
   'warning': #ffc107,
   'danger': #dc3545,
   'light': #f8f9fa,
-  'dark': #212529,
+  // 'dark': #212529,
+  'dark': #000000,
   // 新增自定義顏色
   'purple1': #685beb,
   'purple2': #958cea,
@@ -76,11 +77,42 @@ $theme-colors: (
 
 // #endregion 覆蓋 覆寫 color
 
+// #region 覆寫 border-radius
+
+$border-radius: 0;
+
+// #endregion 覆寫 border-radius
+
 // #region 覆寫 card-border-radius
 
 $card-border-radius: 0;
 
 // #endregion 覆寫 card-border-radius
+
+// #region dark mode 下拉選單 覆寫
+
+$dropdown-dark-bg: #1a1a1a;
+$dropdown-border-radius: $border-radius;
+
+// #endregion dark mode 下拉選單 覆寫
+
+// #region 設置頁籤的邊框圓角為 0
+
+$nav-tabs-border-radius: 0;
+$nav-pills-border-radius: 0;
+
+$nav-tabs-link-active-color: #685beb; //應用中的頁籤的字顏色
+$nav-link-color: #888888;
+
+// #endregion 設置頁籤的邊框圓角為 0
+
+// #region 設置頁籤文字大小和粗細
+
+$nav-link-font-size: 1.25rem; // 設置文字大小
+$nav-link-font-weight: bold; // 設置文字粗細
+$nav-link-hover-color: #685beb;
+
+// #endregion 設置頁籤文字大小和粗細
 
 // ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
 // 這裡導入所有 bootstrap 樣式
@@ -154,7 +186,6 @@ $card-border-radius: 0;
   line-height: normal;
 }
 
-
 .chr-p {
   font-family: 'Roboto';
   font-size: 16px;
@@ -164,9 +195,8 @@ $card-border-radius: 0;
   line-height: normal;
 }
 
-
 .chr-p-14 {
-  font-family: "Roboto", Helvetica;
+  font-family: 'Roboto', Helvetica;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -175,7 +205,7 @@ $card-border-radius: 0;
 }
 
 .chr-p-12 {
-  font-family: "Roboto", Helvetica;
+  font-family: 'Roboto', Helvetica;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -260,7 +290,7 @@ $card-border-radius: 0;
 }
 
 .chb-p-14 {
-  font-family: "Roboto", Helvetica;
+  font-family: 'Roboto', Helvetica;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -269,7 +299,7 @@ $card-border-radius: 0;
 }
 
 .chb-p-12 {
-  font-family: "Roboto", Helvetica;
+  font-family: 'Roboto', Helvetica;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
