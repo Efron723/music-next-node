@@ -74,25 +74,35 @@ $theme-colors: (
   'D': #9e00ff,
   'E': #3ead2c,
 );
+// 設置頁籤的邊框圓角為 0
+$nav-tabs-border-radius: 0;
+$nav-pills-border-radius: 0;
 
+$nav-tabs-link-active-color: #685beb; //應用中的頁籤的字顏色
+$nav-pills-link-active-color: #685beb;
+$nav-link-color: #888888;
+
+// 設置頁籤文字大小和粗細
+$nav-link-font-size: 1.25rem; // 設置文字大小
+$nav-link-font-weight: bold; // 設置文字粗細
+$nav-link-hover-color: #685beb;
+
+// navbar 暗色模式修改
+$navbar-dark-color: #d1d1d1;
+$navbar-dark-hover-color: #958cea;
+$navbar-dark-active-color: #958cea;
 // #endregion 覆蓋 覆寫 color
 
 // #region 覆寫 border-radius
 
 $border-radius: 0;
-
-// #endregion 覆寫 border-radius
-
-// #region 覆寫 card-border-radius
-
 $card-border-radius: 0;
 
-// #endregion 覆寫 card-border-radius
+// #endregion 覆寫 border-radius
 
 // #region dark mode 下拉選單 覆寫
 
 $dropdown-dark-bg: #1a1a1a;
-$dropdown-border-radius: $border-radius;
 
 // #endregion dark mode 下拉選單 覆寫
 
@@ -113,6 +123,39 @@ $nav-link-font-weight: bold; // 設置文字粗細
 $nav-link-hover-color: #685beb;
 
 // #endregion 設置頁籤文字大小和粗細
+
+// #region accordion
+
+$accordion-padding-y: 20px;
+$accordion-padding-x: 20px;
+$accordion-color: black;
+$accordion-bg: white;
+$accordion-border-color: var(--#{$prefix}border-color);
+
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: $accordion-padding-x;
+
+$accordion-button-color: black;
+$accordion-button-bg: var(--#{$prefix}accordion-bg);
+$accordion-transition: $btn-transition, border-radius 0.15s ease;
+$accordion-button-active-bg: var(--#{$prefix}primary-bg-subtle);
+$accordion-button-active-color: var(--#{$prefix}primary-text-emphasis);
+
+// fusv-disable
+$accordion-button-focus-border-color: $input-focus-border-color; // Deprecated in v5.3.3
+// fusv-enable
+$accordion-button-focus-box-shadow: $btn-focus-box-shadow;
+
+$accordion-icon-width: 1.25rem;
+$accordion-icon-color: $body-color;
+$accordion-icon-active-color: $primary-text-emphasis;
+$accordion-icon-transition: transform 0.2s ease-in-out;
+$accordion-icon-transform: rotate(-180deg);
+
+$accordion-button-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-caret-up-fill' viewBox='0 0 16 16'%3E%3Cpath d='m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z'/%3E%3C/svg%3E");
+$accordion-button-active-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-caret-down-fill' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.659c-.566-.647-.106-1.659.753-1.659h9.592a1 1 0 0 1 .753 1.659L8.753 11.14a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+
+// #endregion accordion
 
 // ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
 // 這裡導入所有 bootstrap 樣式
