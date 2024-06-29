@@ -1,19 +1,22 @@
 import React from 'react'
-import styles from './m-navbar.module.scss'
+import styles from './left-bar.module.scss'
 import Link from 'next/link'
 
 export default function LeftBar() {
   return (
     <>
-      <div className=" left-bar">
+      <div className="left-bar bg-black80">
         <div>
-          <div className="bg-warning py-4">
-            <img
-              src="/images/member/img/angel-1284369__340.jpg"
-              className={`${styles['img-size']} mx-auto`}
-            ></img>
+          <div className="py-4">
+            <div className={`${styles.imgF} mx-auto`}>
+              <img
+                src="/images/member/img/angel-1284369__340.jpg"
+                className={`${styles['img-size']} mx-auto`}
+              ></img>
+            </div>
           </div>
-          <div className="bg-secondary text-center">
+
+          <div className="text-center">
             <p
               className={`${styles['short-underline']} chb-h5 m-0 mb-3 text-white`}
             >
@@ -23,8 +26,8 @@ export default function LeftBar() {
         </div>
 
         {/* 功能列 */}
-        <div className="bg-primary">
-          <ul className="list-unstyled m-0 my-3">
+        <div className="">
+          <ul className="list-unstyled m-0">
             <Link
               href=""
               className="text-decoration-none text-center fw-bold m-0 chr-h5"
@@ -59,8 +62,8 @@ export default function LeftBar() {
         </div>
         {/* 信箱與登出 */}
 
-        <div className="bottom-content text-center bg-danger py-3">
-          <span className="chr-h6">jin@gmail.com</span>
+        <div className="bottom-content text-center bg-black80 py-3">
+          <span className="chr-h6 text-white">jin@gmail.com</span>
           <br />
           <a href="" className="text-decoration-none">
             登出
@@ -83,6 +86,12 @@ export default function LeftBar() {
           width: 100%;
           padding: 10px;
           background-color: #f4f4f4;
+        }
+        /* 在手機板上隱藏 .left-bar */
+        @media (max-width: 576px) {
+          .left-bar {
+            display: none;
+          }
         }
       `}</style>
     </>
